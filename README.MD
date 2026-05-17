@@ -1,0 +1,55 @@
+# Shale's Custom Weapons (& ports)
+this is a document i use to draft weapons before i add them or implement them. this isn't really a readme, so sorry about the clickbait title
+
+- london gambit (scrapped. too similar to the fishwhacker)(unscrapped with new gimmick!)
+	- sniper melee
+	- https://gamebanana.com/mods/471090
+	- bleed for 4 seconds
+	- 75% less damage
+	- lower range? on miss hit yourself?
+- stunstick (i dont got a name for this one yet)
+	- pyro melee
+	- https://gamebanana.com/mods/437174
+	- on kill, does the cow mangler dissolve effect
+	- extends target to everyone on medibeams
+	- basically the third degree if it locked in
+	- light target on fire? tranq effect?
+- viewfinder (added. works pretty well with some changes)
+	- sniper primary
+	- old scrapped weapon
+	- https://gamebanana.com/mods/437174
+	- headshots do minicrits
+	- on hit, mark target for death
+	- subtly slower firing speed, like 10%
+	- cannot scope? scopes less? 
+	- don't make it the hunting revolver. we're not giving it a clip
+- new sandman
+	- scout melee
+	- https://wiki.tf2classic.com/wiki/List_of_item_attributes#:~:text=3240,deflect%5Fon%5Fswing
+	- deflect projectiles on swing
+	- no double jump 
+- the deershot (hunting rifle?)(actually i really like this one)
+	- scout primary
+	- https://gamebanana.com/mods/467694
+	- longer range
+	- slower firing speed
+	- just... the shortstop
+- handyman 
+	- spy melee? or revolver?
+	- https://gamebanana.com/mods/612611
+	- spy just fucking uses hands
+	- "Fine, I'll do it myself" description
+- lifesteal
+	- some kind of melee weapon
+	- drops health on kill
+	- idk. max health penalty?
+	- bullet damage vulnerability?
+- the Five Cent Raise
+	- civvie weapon
+	- overpowered but takes a while to build?
+	- TF_COND_PURGATORY
+	- "civ boost cond override"
+- bat outta hell
+	- scout melee
+	- bonk people to YIKES! them for X seconds
+	- -50% melee damage?
