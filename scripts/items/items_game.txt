@@ -1102,7 +1102,7 @@
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.5" // this makes it MORE accurate!
+					"value"	"0.5"
 				}
 				"fire rate bonus"
 				{
@@ -1575,6 +1575,11 @@
 				//	"attribute_class"	"bullet_is_a_hull"
 				//	"value"	"1"
 				//}
+				"weapon exclusive to holiday"
+				{
+					"attribute_class" "weapon_exclusive_to_holiday"
+					"value" "11"
+				}
 			}
 			"visuals"
 			{
@@ -3230,6 +3235,7 @@
 					"value"	"100"
 				}
 				"damage penalty"	{"value"	"0.3"}
+				"maxammo primary reduced"	{"value"	"0.0"}
 			}
 		}
 		"12074"	// soldier revolver?
@@ -3310,7 +3316,7 @@
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"	"1.33" // tighter spread actually
+					"value"	"0.66"
 				}
 				"clip size bonus"
 				{
