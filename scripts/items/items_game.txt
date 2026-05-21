@@ -679,7 +679,7 @@
 			"name"				"LONGSHOTTY_HEAVY"
 			"item_name"			"#TF_Weapon_LongShotgun"
 			"item_description"	"#TF_Weapon_LongShotgun_Desc_Heavy"
-			"prefab"		"weapon_longshotty"
+			"prefab"		"weapon_longshotty deprecated"
 
 			"item_logname"	"long_shotty_heavy"
 			"item_iconname"	"frontier_kill"
@@ -3283,6 +3283,97 @@
 				}
 			}
 		}
+		"12075" // scanner
+		{
+			"name"	"TF_WEAPON_MEDICSCANNER"
+			"item_name"	"#TF_Weapon_MedicScanner"
+			"item_type_name"	"#TF_Weapon_Scanner"
+			"item_description"	"#TF_Weapon_MedicScanner_Desc"
+			"used_by_classes"	{
+				"medic"	"1"
+			}
+			
+			"item_class"	"tf_weapon_bonesaw"
+			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
+			"bucket"	"2"
+			"attach_to_hands"	"1"
+			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler"
+			"model_player"		"models/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler.mdl"
+			
+			"attributes" {
+				"provide on active"	{	"value"	"1"	}
+				"damage penalty"	{	"value"	"0.6"	}
+				"mod see enemy health"	{	"value" "1"	}
+				"ragdolls become ash"	{	"value"	"1"	}
+				"crit vs wet players"	{	"value"	"1"	}
+				"crit vs burning players"	{	"value"	"2097151"	}
+				"crit mod disabled"	{	"value"	"0"	}
+			}
+			
+			"visuals" {
+				"player_poseparam" {
+					"r_hand_grip"		"14" // fixes scanner hold position
+					"r_arm"				"0" // default
+				}
+			}
+		}
+		"12076" // big buck
+		{
+			"name"	"TF_WEAPON_BIGBUCK"
+			"item_name"	"#TF_Weapon_BigBuck"
+			"propername"	"1"
+			"item_type_name"	"#TF_Weapon_Shotgun"
+			"item_description"	"#TF_Weapon_BigBuck_Desc"
+			"used_by_classes"	{
+				"heavy"	"1"
+			}
+			
+			"item_class"	"tf_weapon_shotgun"
+			"item_slot"	"secondary"
+			"anim_slot"	"secondary"
+			"bucket"	"1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/models/c_models/w_bigbuck"
+			"model_player"	"models/weapons/c_models/c_bigbuck/c_shotgun.mdl"
+			
+			"attributes"	{
+				"big buck minicrits on headshot"	"1"
+				"big buck fires slugs"	"1"
+				"big buck range minicrits"	"1"
+				"big buck slug accuracy"	"1"
+				"clip size penalty"	{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.66"
+				}
+				"maxammo secondary reduced"	{"value"	"0.5"}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.2" 
+				}
+				"hidden separator"	"1"
+				"damage bonus"	{"value"	"6.70"}
+				"bullets per shot bonus"	{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "0.1"
+				}
+				"weapon spread bonus"	{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.001"
+				}
+				"can headshot"
+				{
+					"attribute_class"	"can_headshot"
+					"value"	"1"
+				}
+				"headshot is minicrit"
+				{
+					"attribute_class"	"headshot_is_minicrit"
+					"value"	"1"
+				}	
+			}
+		}
 	}
 	"prefabs"
 	{
@@ -3549,6 +3640,25 @@
 				"bots_cant_use"	"1"
 			}
 			"show_in_armory"	"0"
+		}
+		
+		"headshots_minicrits"
+		{
+			"attributes"	{
+				"can headshot visible"	{
+					"value"	"1"
+				}	
+				"can headshot"
+				{
+					"attribute_class"	"can_headshot"
+					"value"	"1"
+				}
+				"headshot is minicrit"
+				{
+					"attribute_class"	"headshot_is_minicrit"
+					"value"	"1"
+				}	
+			}
 		}
 	}
 	"attributes"
@@ -3949,6 +4059,42 @@
 			"description_format"	"value_is_percentage"
 			"hidden"		"0"
 			"effect_type"		"positive"
+		}
+		"25041"
+		{
+			"name"			"big buck minicrits on headshot"
+			"attribute_class"	"FORCE_NOT_USED"
+			"description_string"		"#Attrib_BigBuckHeadshotMinicrits"
+			"description_format"	"value_is_percentage"
+			"hidden"		"0"
+			"effect_type"		"positive"
+		}
+		"25042"
+		{
+			"name"			"big buck fires slugs"
+			"attribute_class"	"FORCE_NOT_USED"
+			"description_string"		"#Attrib_BigBuckFiresSlugs"
+			"description_format"	"value_is_percentage"
+			"hidden"		"0"
+			"effect_type"		"positive"
+		}
+		"25043"
+		{
+			"name"			"big buck range minicrits"
+			"attribute_class"	"FORCE_NOT_USED"
+			"description_string"		"#Attrib_BigBuckMinicritDamageAffectedRange"
+			"description_format"	"value_is_percentage"
+			"hidden"		"0"
+			"effect_type"		"neutral"
+		}
+		"25044"
+		{
+			"name"			"big buck slug accuracy"
+			"attribute_class"	"FORCE_NOT_USED"
+			"description_string"		"#Attrib_BigBuckSlugAccuracy"
+			"description_format"	"value_is_percentage"
+			"hidden"		"0"
+			"effect_type"		"neutral"
 		}
 	}
 }
