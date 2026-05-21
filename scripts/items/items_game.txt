@@ -1647,7 +1647,7 @@
 				"explosion_effect"	"mvm_tank_destroy"
 			}
 			"item_logname"	"bigbomb"
-			"item_iconname"	"sticky"
+			"item_iconname"	"tf_projectile_pipe_remote"
 			"anim_slot"	"item2"
 
 			"image_inventory"	"backpack\models\c_models\c_bigbomb"
@@ -3244,6 +3244,7 @@
 			"item_name"	"#TF_Weapon_SoldierRevolver"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_description"	"#TF_Weapon_SoldierRevolver_Desc"
+			"prefab"	"deprecated" // don't release yet
 			"used_by_classes"	{
 				"soldier"	"1" // he's the only guy who has a pistol looking animation and doesn't actually have a pistol
 			}
@@ -3289,6 +3290,7 @@
 			"item_name"	"#TF_Weapon_MedicScanner"
 			"item_type_name"	"#TF_Weapon_Scanner"
 			"item_description"	"#TF_Weapon_MedicScanner_Desc"
+			"prefab"	"deprecated" // don't release yet
 			"used_by_classes"	{
 				"medic"	"1"
 			}
