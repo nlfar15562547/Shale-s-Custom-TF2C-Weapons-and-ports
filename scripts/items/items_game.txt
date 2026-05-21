@@ -1822,6 +1822,7 @@
 		{
 			"name"	"HLPistol"
 			"item_class"	"tf_weapon_pistol"
+			"prefab"	"headshots_minicrits"
 			"item_name"	"#TF_Weapon_HLPistol"
 			"item_type_name"	"#TF_Weapon_HLPistol_Type"
 			"item_description"	"#TF_Weapon_HLPistol_Desc"
@@ -1848,16 +1849,6 @@
 			}
 			"attributes"
 			{
-				"can headshot visible"
-				{
-					"attribute_class"	"can_headshot"
-					"value"	"1"
-				}
-				"headshot is minicrit"
-				{
-					"attribute_class"	"headshot_is_minicrit"
-					"value"	"1"
-				}
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
@@ -3244,7 +3235,7 @@
 			"item_name"	"#TF_Weapon_SoldierRevolver"
 			"item_type_name"	"#TF_Weapon_Revolver"
 			"item_description"	"#TF_Weapon_SoldierRevolver_Desc"
-			"prefab"	"deprecated" // don't release yet
+			//"prefab"	"deprecated" // don't release yet
 			"used_by_classes"	{
 				"soldier"	"1" // he's the only guy who has a pistol looking animation and doesn't actually have a pistol
 			}
@@ -3290,7 +3281,7 @@
 			"item_name"	"#TF_Weapon_MedicScanner"
 			"item_type_name"	"#TF_Weapon_Scanner"
 			"item_description"	"#TF_Weapon_MedicScanner_Desc"
-			"prefab"	"deprecated" // don't release yet
+			//"prefab"	"deprecated" // don't release yet
 			"used_by_classes"	{
 				"medic"	"1"
 			}
@@ -3309,7 +3300,7 @@
 				"mod see enemy health"	{	"value" "1"	}
 				"ragdolls become ash"	{	"value"	"1"	}
 				"crit vs wet players"	{	"value"	"1"	}
-				"crit vs burning players"	{	"value"	"2097151"	}
+				"crit vs burning players"	{	"value"	"2097151"	} // todo: change attribute text to "guaranteed crits sometimes"
 				"crit mod disabled"	{	"value"	"0"	}
 			}
 			
@@ -3396,8 +3387,8 @@
 			"item_logname"	"long_shotty"
 			"item_iconname"	"frontier_kill"
 			"image_inventory"	"backpack/models/c_models/c_longshotgun"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"	"82"
+			"image_inventory_size_w"		"256"
+			"image_inventory_size_h"	"164"
 
 			"static_attrs"
 			{

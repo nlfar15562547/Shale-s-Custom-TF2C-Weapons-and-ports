@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture"	"backpack\models\c_models\w_shotgun_large"
+	"$basetexture"	"backpack\models\c_models\w_bigbuck_large"
 	"$translucent"	"1"
 	"$vertexcolor"	"1"
 	"$vertexalpha"	"1"
