@@ -3294,6 +3294,10 @@
 			"image_inventory"		"backpack/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler"
 			"model_player"		"models/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler.mdl"
 			
+			"static_attrs"	{
+				"taunt attack name"	{	"value"	"TAUNTATK_DEMOMAN_MIRV_KILL"}
+				"taunt attack time"	{	"value"	"0.0"	}
+			}
 			"attributes" {
 				"provide on active"	{	"value"	"1"	}
 				"damage penalty"	{	"value"	"0.6"	}
@@ -3308,6 +3312,11 @@
 				"player_poseparam" {
 					"r_hand_grip"		"14" // fixes scanner hold position
 					"r_arm"				"0" // default
+				}
+				"animation_replacement" {
+					"ACT_VM_IDLE"		"ACT_MELEE_VM_IDLE" 
+					"ACT_VM_DRAW"		"ACT_MELEE_VM_DRAW" 
+					"ACT_VM_HITCENTER"		"ACT_MELEE_VM_HITCENTER" 
 				}
 			}
 		}
@@ -3365,6 +3374,35 @@
 					"attribute_class"	"headshot_is_minicrit"
 					"value"	"1"
 				}	
+			}
+		}
+		"12077" // medic rifle
+		{
+			"name"	"TF_WEAPON_MEDICRIFLE"
+			"item_name"	"#TF_Weapon_MedicRifle"
+			"propername"	"0"
+			"item_type_name"	"#TF_Weapon_Rifle"
+			"item_description"	"#TF_Weapon_MedicRifle_Desc"
+			"used_by_classes"	{
+				"medic"	"1"
+			}
+
+			"item_class"	"tf_weapon_revolver"
+			"item_slot"	"primary"
+			"anim_slot"	"primary"
+			"bucket"	"0"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_sydney_sleeper/c_sydney_sleeper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_medicrifle/c_sydney_sleeper.mdl"
+		
+			"visuals" {
+				"animation_replacement" {
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"		"ACT_MP_ATTACK_CROUCH_ITEM1" 
+					"ACT_MP_ATTACK_STAND_PRIMARY"		"ACT_MP_ATTACK_STAND_ITEM1"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"		"ACT_MP_ATTACK_SWIM_ITEM1"
+				}
 			}
 		}
 	}
