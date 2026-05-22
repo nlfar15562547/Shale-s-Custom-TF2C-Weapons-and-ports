@@ -3337,7 +3337,7 @@
 				"big buck slug accuracy"	"1"
 				"clip size penalty"	{
 					"attribute_class"	"mult_clipsize"
-					"value"	"0.66"
+					"value"	"0.67"
 				}
 				"maxammo secondary reduced"	{"value"	"0.5"}
 				"Reload time increased"
