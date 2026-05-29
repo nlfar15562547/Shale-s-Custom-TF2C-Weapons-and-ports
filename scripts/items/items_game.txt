@@ -3295,16 +3295,16 @@
 			"model_player"		"models/workshop/weapons/c_models/c_invasion_wrangler/c_invasion_wrangler.mdl"
 			
 			"static_attrs"	{
-				"taunt attack name"	{	"value"	"TAUNTATK_DEMOMAN_MIRV_KILL"}
+				"taunt attack name"	{	"value"	"TAUNTATK_DEMOMAN_MIRV_KILL"} // he scans himself and explodes
 				"taunt attack time"	{	"value"	"0.0"	}
 			}
 			"attributes" {
 				"provide on active"	{	"value"	"1"	}
-				"damage penalty"	{	"value"	"0.6"	}
 				"mod see enemy health"	{	"value" "1"	}
 				"ragdolls become ash"	{	"value"	"1"	}
 				"crit vs wet players"	{	"value"	"1"	}
-				"crit vs burning players"	{	"value"	"2097151"	} // todo: change attribute text to "guaranteed crits sometimes"
+				"crit vs sometimes"	{	"value"	"2097151"	} 
+				"damage penalty"	{	"value"	"0.7"	}
 				"crit mod disabled"	{	"value"	"0"	}
 			}
 			
@@ -3402,6 +3402,71 @@
 					"ACT_MP_ATTACK_CROUCH_PRIMARY"		"ACT_MP_ATTACK_CROUCH_ITEM1" 
 					"ACT_MP_ATTACK_STAND_PRIMARY"		"ACT_MP_ATTACK_STAND_ITEM1"
 					"ACT_MP_ATTACK_SWIM_PRIMARY"		"ACT_MP_ATTACK_SWIM_ITEM1"
+				}
+			}
+		}
+		"12078" // spy stickies
+		{
+			"name"	"TF_WEAPON_SPYJUMPER"
+			"item_name"	"#TF_Weapon_SpyJumper"
+			"propername"	"0"
+			"item_type_name"	"#TF_Weapon_StickybombLauncher"
+			"item_description"	"#TF_Weapon_SpyJumper_Desc"
+			"tags"	{
+				"bots_cant_use"	"1"	// i just KNOW some bot jank is gonna come out of this
+			}
+			"used_by_classes"	{
+				"spy"	"1"
+			}
+			
+			"item_class"	"tf_weapon_pipebomblauncher"
+			"item_slot"	"pda2"
+			"anim_slot"	"primary"
+			"bucket"	"4"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_sticky_jumper/c_sticky_jumper"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"50"
+			"model_player"	"models/weapons/c_models/c_sticky_jumper/c_sticky_jumper.mdl"
+			"attributes"	{
+				"bucket slot"	{	"value"	"5"	}
+
+
+				"no self blast dmg"
+				{
+					"attribute_class"	"no_self_blast_dmg"
+					"value" "1"
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"	"4"
+				}
+				"maxammo grenades1 increased"
+				{
+					"attribute_class"	"mult_maxammo_grenades1"
+					"value" "3.0"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"14"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0"
+				}
+				"max pipebombs decreased"
+				{
+					"attribute_class"	"add_max_pipebombs"
+					"value" "-6"
+				}
+				"cannot pick up intelligence"
+				{
+					"attribute_class"	"cannot_pick_up_intelligence"
+					"value"				"1"
 				}
 			}
 		}
@@ -4126,6 +4191,25 @@
 			"description_format"	"value_is_percentage"
 			"hidden"		"0"
 			"effect_type"		"neutral"
+		}
+		"25045"
+		{
+			"name"		"crit vs sometimes"
+			"attribute_class"		"or_crit_vs_playercond"
+			"description_string"		"#Attrib_CritsSometimes"
+			"description_format"		"value_is_or"
+			"hidden"		"0"
+			"effect_type"		"positive"
+			"stored_as_integer"		"0"
+		}
+		"25046"
+		{
+			"name"		"bucket slot"
+			"attribute_class"	"FORCE_NOT_USED"
+			"description_string"	"#Attrib_BucketSlot"
+			"description_format"	"value_is_additive"
+			"effect_type"	"neutral"
+			//"stored_as_integer"	"1"
 		}
 	}
 }
